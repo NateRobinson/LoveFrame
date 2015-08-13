@@ -10,7 +10,7 @@ import com.facebook.drawee.backends.pipeline.Fresco;
  */
 public class LoveFrameApplication extends Application
 {
-    private static final String CANARO_EXTRA_BOLD_PATH = "fonts/canaro_extra_bold.otf";
+    private static final String CANARO_EXTRA_BOLD_PATH = "fonts/AdobeKaitiStd-Regular.otf";
     
     public static Typeface canaroExtraBold;
     
