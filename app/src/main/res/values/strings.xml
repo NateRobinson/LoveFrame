@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">LoveFrame</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="profile">个人中心</string>
+    <string name="feed">体验反馈</string>
+    <string name="activity">主页</string>
+    <string name="settings">设置</string>
 </resources>

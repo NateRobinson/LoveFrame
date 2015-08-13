@@ -1,39 +1,92 @@
 package com.nate.loveframe.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.content.Intent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
+
+import butterknife.Bind;
 
 import com.nate.loveframe.R;
+import com.nate.loveframe.ui.activity.base.BaseActivity;
+import com.nate.loveframe.ui.activity.test.BottomMenuActivity;
+import com.yalantis.guillotine.animation.GuillotineAnimation;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends BaseActivity
+{
+    private static final long RIPPLE_DURATION = 250;
+    
+    @Bind(R.id.bottomMenu)
+    Button bottomMenu;
+    
+    @Bind(R.id.root)
+    FrameLayout root;
+    
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void initContentLayout()
+    {
         setContentView(R.layout.activity_main);
     }
-
+    
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+    public void initListener()
+    {
+        bottomMenu.setOnClickListener(this);
+    }
+    
+    @Override
+    public void initData()
+    {
+        // 设置toolbar
+        setCustomToolbar(ToolbarType.WITHMENU, "首页");
+        // 设置menu 可以更具每个页面自己定义
+        View mainToolbarMenu = LayoutInflater.from(this).inflate(R.layout.main_toolbar_menu, null);
+        root.addView(mainToolbarMenu);
+        GuillotineAnimation mainToolbarMenuAnimation = new GuillotineAnimation.GuillotineBuilder(mainToolbarMenu,
+            mainToolbarMenu.findViewById(R.id.guillotine_hamburger), contentHamburger).setStartDelay(RIPPLE_DURATION)
+                .setActionBarViewForAnimation(toolbar)
+                .build();
+        mainToolbarMenuAnimation.close();
+        // menu中菜单项的点击测试
+        mainToolbarMenu.findViewById(R.id.profile_group).setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                showSuperToast("profile_group");
+            }
+        });
+    }
+    
+    @Override
+    public void bindClick(int viewId)
+    {
+        Intent intent = new Intent();
+        switch (viewId)
+        {
+            case R.id.bottomMenu:
+                intent.setClass(MainActivity.this, BottomMenuActivity.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
+    
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         return super.onOptionsItemSelected(item);
     }
+    
 }
