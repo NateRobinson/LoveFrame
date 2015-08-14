@@ -32,7 +32,7 @@
                 android:layout_alignLeft="@id/logo_img"
                 android:layout_below="@id/logo_img"
                 android:layout_marginLeft="15dp"
-                android:text="show material progress"
+                android:text="带圆形进度框的对话框"
                 android:textColor="#797979"
                 android:textSize="14sp" />
 
@@ -51,7 +51,7 @@
                 android:layout_alignLeft="@id/logo_img"
                 android:layout_below="@id/progress_dialog"
                 android:layout_marginLeft="15dp"
-                android:text="A basic message"
+                android:text="展示最简单基本的用法"
                 android:textColor="#797979"
                 android:textSize="14sp" />
 
@@ -71,7 +71,7 @@
                 android:layout_below="@id/basic_test"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:text="A title with a text under"
+                android:text="有内容有标题"
                 android:textColor="#797979"
                 android:textSize="14sp" />
 
@@ -91,7 +91,7 @@
                 android:layout_below="@id/under_text_test"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:text="show error message"
+                android:text="错误提示类型的弹出框"
                 android:textColor="#797979"
                 android:textSize="14sp" />
 
@@ -111,7 +111,7 @@
                 android:layout_below="@id/error_text_test"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:text="A success message"
+                android:text="成功类型的弹出框"
                 android:textColor="#797979"
                 android:textSize="14sp" />
 
@@ -132,7 +132,7 @@
                 android:layout_below="@id/success_text_test"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:text="A warning message, with a listener bind to the Confirm-button..."
+                android:text="一个带了按钮监听的警告框"
                 android:textColor="#797979"
                 android:textSize="14sp" />
 
@@ -152,7 +152,7 @@
                 android:layout_below="@id/warning_confirm_test"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:text="A warning message, with listeners bind to Cancel and Confirm button..."
+                android:text="一个警告框，里面有两个按钮监听"
                 android:textColor="#797979"
                 android:textSize="14sp" />
 
@@ -172,7 +172,7 @@
                 android:layout_below="@id/warning_cancel_test"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:text="A message with a custom icon"
+                android:text="带自定义图片的弹出框"
                 android:textColor="#797979"
                 android:textSize="14sp" />
 

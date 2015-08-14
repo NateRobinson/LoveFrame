@@ -45,38 +45,50 @@ public class SweetDialogActivity extends BaseActivity
         switch (viewId)
         {
             case R.id.basic_test:
-                // default title "Here's a message!"
+                // 默认展示的内容是"Here's a message!"
                 SweetAlertDialog sd = new SweetAlertDialog(this);
+                sd.setTitleText("消息");
+                sd.setConfirmText("好的");
+                // 可以按返回取消
                 sd.setCancelable(true);
+                // 可以点击外部取消
                 sd.setCanceledOnTouchOutside(true);
                 sd.show();
                 break;
             case R.id.under_text_test:
-                new SweetAlertDialog(this).setContentText("It's pretty, isn't it?").show();
+                // 有内容，有标题的dialog
+                new SweetAlertDialog(this).setTitleText("标题")
+                    .setContentText("这个弹出框很漂亮，是不是？")
+                    .setConfirmText("好的")
+                    .show();
                 break;
             case R.id.error_text_test:
-                new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE).setTitleText("Oops...")
-                    .setContentText("Something went wrong!")
+                // 错误提示类型的弹出框
+                new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE).setTitleText("标题")
+                    .setContentText("这里出了点问题!")
+                    .setConfirmText("好的")
                     .show();
                 break;
             case R.id.success_text_test:
-                new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("Good job!")
-                    .setContentText("You clicked the button!")
+                // 成功类型的弹出框
+                new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("标题")
+                    .setContentText("干的漂亮!")
+                    .setConfirmText("好的")
                     .show();
                 break;
             case R.id.warning_confirm_test:
-                new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE).setTitleText("Are you sure?")
-                    .setContentText("Won't be able to recover this file!")
-                    .setConfirmText("Yes,delete it!")
+                // 一个带了按钮监听的警告框
+                new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE).setTitleText("确定删除?")
+                    .setContentText("删除将不可恢复!")
+                    .setConfirmText("确定!")
                     .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener()
                     {
                         @Override
                         public void onClick(SweetAlertDialog sDialog)
                         {
-                            // reuse previous dialog instance
-                            sDialog.setTitleText("Deleted!")
-                                .setContentText("Your imaginary file has been deleted!")
-                                .setConfirmText("OK")
+                            sDialog.setTitleText("已删除!")
+                                .setContentText("文件已删除!")
+                                .setConfirmText("好的")
                                 .setConfirmClickListener(null)
                                 .changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
                         }
@@ -84,41 +96,36 @@ public class SweetDialogActivity extends BaseActivity
                     .show();
                 break;
             case R.id.warning_cancel_test:
-                new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE).setTitleText("Are you sure?")
-                    .setContentText("Won't be able to recover this file!")
-                    .setCancelText("No,cancel plx!")
-                    .setConfirmText("Yes,delete it!")
+                // 一个警告框，里面有两个按钮监听
+                new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE).setTitleText("确定删除?")
+                    .setContentText("删除不可恢复!")
+                    .setCancelText("取消")
+                    .setConfirmText("确定")
                     .showCancelButton(true)
-                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener()
-                    {
-                        @Override
-                        public void onClick(SweetAlertDialog sDialog)
-                        {
-                            // reuse previous dialog instance, keep widget user state, reset them if you need
-                            sDialog.setTitleText("Cancelled!")
-                                .setContentText("Your imaginary file is safe :)")
-                                .setConfirmText("OK")
-                                .showCancelButton(false)
-                                .setCancelClickListener(null)
-                                .setConfirmClickListener(null)
-                                .changeAlertType(SweetAlertDialog.ERROR_TYPE);
-                                
-                            // or you can new a SweetAlertDialog to show
-                            /*
-                             * sDialog.dismiss(); new SweetAlertDialog(SampleActivity.this, SweetAlertDialog.ERROR_TYPE)
-                             * .setTitleText("Cancelled!") .setContentText("Your imaginary file is safe :)")
-                             * .setConfirmText("OK") .show();
-                             */
-                        }
-                    })
+                    .setCancelClickListener(null)
+                    // .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener()
+                    // {
+                    // @Override
+                    // public void onClick(SweetAlertDialog sDialog)
+                    // {
+                    // // reuse previous dialog instance, keep widget user state, reset them if you need
+                    // sDialog.setTitleText("Cancelled!")
+                    // .setContentText("Your imaginary file is safe :)")
+                    // .setConfirmText("OK")
+                    // .showCancelButton(false)
+                    // .setCancelClickListener(null)
+                    // .setConfirmClickListener(null)
+                    // .changeAlertType(SweetAlertDialog.ERROR_TYPE);
+                    // }
+                    // })
                     .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener()
                     {
                         @Override
                         public void onClick(SweetAlertDialog sDialog)
                         {
-                            sDialog.setTitleText("Deleted!")
-                                .setContentText("Your imaginary file has been deleted!")
-                                .setConfirmText("OK")
+                            sDialog.setTitleText("已删除!")
+                                .setContentText("文件已删除!")
+                                .setConfirmText("好的")
                                 .showCancelButton(false)
                                 .setCancelClickListener(null)
                                 .setConfirmClickListener(null)
@@ -128,8 +135,9 @@ public class SweetDialogActivity extends BaseActivity
                     .show();
                 break;
             case R.id.custom_img_test:
-                new SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE).setTitleText("Sweet!")
-                    .setContentText("Here's a custom image.")
+                // 带自定义图片的弹出框 CUSTOM_IMAGE_TYPE
+                new SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE).setTitleText("棒棒!")
+                    .setContentText("干的漂亮")
                     .setCustomImage(R.mipmap.custom_img)
                     .show();
                 break;
@@ -138,11 +146,12 @@ public class SweetDialogActivity extends BaseActivity
                     new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE).setTitleText("Loading");
                 pDialog.show();
                 pDialog.setCancelable(false);
+                // 使用CountDownTimer进行定时操作
                 new CountDownTimer(800 * 7, 800)
                 {
                     public void onTick(long millisUntilFinished)
                     {
-                        // you can change the progress bar color by ProgressHelper every 800 millis
+                        // 你可以没800毫秒改变一次进度条的颜色
                         i++;
                         switch (i)
                         {
@@ -180,9 +189,7 @@ public class SweetDialogActivity extends BaseActivity
                     public void onFinish()
                     {
                         i = -1;
-                        pDialog.setTitleText("Success!")
-                            .setConfirmText("OK")
-                            .changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+                        pDialog.setTitleText("成功!").setConfirmText("好的").changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
                     }
                 }.start();
                 break;
