@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/LoveFrame.iml" filepath="$PROJECT_DIR$/LoveFrame.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/guillotinemenu/guillotinemenu.iml" filepath="$PROJECT_DIR$/guillotinemenu/guillotinemenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/overlaymenulibrary/overlaymenulibrary.iml" filepath="$PROJECT_DIR$/overlaymenulibrary/overlaymenulibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/supertoasts/supertoasts.iml" filepath="$PROJECT_DIR$/supertoasts/supertoasts.iml" />
     </modules>
   </component>

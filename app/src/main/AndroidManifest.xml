@@ -24,6 +24,9 @@
         <activity
             android:name=".ui.activity.test.BottomMenuActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activity.test.OverlayMenuActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

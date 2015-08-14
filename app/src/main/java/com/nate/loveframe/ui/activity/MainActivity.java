@@ -13,6 +13,7 @@ import butterknife.Bind;
 import com.nate.loveframe.R;
 import com.nate.loveframe.ui.activity.base.BaseActivity;
 import com.nate.loveframe.ui.activity.test.BottomMenuActivity;
+import com.nate.loveframe.ui.activity.test.OverlayMenuActivity;
 import com.yalantis.guillotine.animation.GuillotineAnimation;
 
 public class MainActivity extends BaseActivity
@@ -21,7 +22,9 @@ public class MainActivity extends BaseActivity
     
     @Bind(R.id.bottomMenu)
     Button bottomMenu;
-    
+    @Bind(R.id.overlayMenu)
+    Button overlayMenu;
+
     @Bind(R.id.root)
     FrameLayout root;
     
@@ -35,6 +38,7 @@ public class MainActivity extends BaseActivity
     public void initListener()
     {
         bottomMenu.setOnClickListener(this);
+        overlayMenu.setOnClickListener(this);
     }
     
     @Override
@@ -69,6 +73,10 @@ public class MainActivity extends BaseActivity
         {
             case R.id.bottomMenu:
                 intent.setClass(MainActivity.this, BottomMenuActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.overlayMenu:
+                intent.setClass(MainActivity.this, OverlayMenuActivity.class);
                 startActivity(intent);
                 break;
             default:

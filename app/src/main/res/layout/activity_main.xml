@@ -16,8 +16,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include
-            layout="@layout/toolbar_layout"/>
+        <include layout="@layout/toolbar_layout" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -33,6 +32,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="底部菜单使用测试" />
+
+                <Button
+                    android:id="@+id/overlayMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="overlay菜单使用测试" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
