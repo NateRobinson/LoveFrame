@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="overmenuEntries">
-        <item>First Item</item>
-        <item>Second Item</item>
-        <item>Third Item</item>
-        <item>Fourth Item</item>
-        <item>Fifth Item</item>
-        <item>Sixth Item</item>
-        <item>Seventh Item</item>
+        <item>菜单一</item>
+        <item>菜单二</item>
+        <item>菜单三</item>
+        <item>菜单四</item>
+        <item>菜单五</item>
+        <item>菜单六</item>
+        <item>菜单七</item>
+    </string-array>
+
+    <string-array name="tabmenu">
+        <item>Tab1</item>
+        <item>Tab2</item>
+        <item>Tab3</item>
+        <item>Tab4</item>
     </string-array>
 </resources>

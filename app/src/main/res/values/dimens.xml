@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Guillotine screen dimens-->
+    <!-- toolbar上的标题文字大小-->
+    <dimen name="toolbar_title_size">20sp</dimen>
     <dimen name="guillotine_small_margin">24dp</dimen>
     <dimen name="guillotine_medium_margin">48dp</dimen>
     <dimen name="guillotine_large_margin">100dp</dimen>
@@ -8,5 +9,4 @@
 
     <dimen name="guillotine_item_text_size">20sp</dimen>
     <dimen name="guillotine_actionbar_background_view_height">35dp</dimen>
-
 </resources>

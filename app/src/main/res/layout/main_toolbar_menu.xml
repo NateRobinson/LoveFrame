@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/guillotine_background"
+    android:background="@color/toolbar_background"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -14,6 +14,14 @@
             android:id="@+id/guillotine_hamburger"
             style="@style/ImageView.Hamburger"
             android:src="@mipmap/ic_menu" />
+
+        <com.nate.loveframe.widget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="菜单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_title_size" />
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
@@ -41,19 +49,6 @@
         <com.nate.loveframe.widget.CustomTextView
             style="@style/TextView.GuillotineItem"
             android:text="@string/feed" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/activity_group"
-        style="@style/LinearLayout.GuillotineItem">
-
-        <ImageView
-            style="@style/ImageView.GuillotineItem"
-            android:src="@mipmap/ic_activity_active" />
-
-        <com.nate.loveframe.widget.CustomTextView
-            style="@style/TextView.GuillotineItem.Selected"
-            android:text="@string/activity" />
     </LinearLayout>
 
     <LinearLayout
