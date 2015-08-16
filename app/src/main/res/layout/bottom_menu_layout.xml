@@ -9,16 +9,16 @@
 
     <Button
         android:layout_marginTop="8dp"
-        android:id="@+id/showBtn"
+        android:id="@+id/ios6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="弹出BottomMenu" />
+        android:text="弹出ios6" />
 
     <Button
-        android:id="@+id/hideBtn"
+        android:id="@+id/ios7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="隐藏ButtonMenu" />
+        android:text="隐藏ios7" />
 </LinearLayout>

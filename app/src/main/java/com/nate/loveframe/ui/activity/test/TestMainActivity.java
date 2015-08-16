@@ -1,4 +1,4 @@
-package com.nate.loveframe.ui.activity;
+package com.nate.loveframe.ui.activity.test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ import com.nate.loveframe.ui.fragment.FragmentC;
 import com.nate.loveframe.ui.fragment.FragmentD;
 import com.yalantis.guillotine.animation.GuillotineAnimation;
 
-public class MainActivity extends BaseActivity
+public class TestMainActivity extends BaseActivity
 {
     private static final long RIPPLE_DURATION = 250;
     
