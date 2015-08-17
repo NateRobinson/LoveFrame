@@ -13,8 +13,10 @@ import butterknife.ButterKnife;
 
 import com.nate.loveframe.R;
 import com.nate.loveframe.ui.activity.test.ActionSheetActivity;
+import com.nate.loveframe.ui.activity.test.DesignTabLayoutActivity;
 import com.nate.loveframe.ui.activity.test.OverlayMenuActivity;
 import com.nate.loveframe.ui.activity.test.PhotoSelectTestActivity;
+import com.nate.loveframe.ui.activity.test.ProgressBarTestActivity;
 import com.nate.loveframe.ui.activity.test.SweetDialogActivity;
 import com.nate.loveframe.ui.fragment.base.BaseFragment;
 
@@ -24,17 +26,24 @@ import com.nate.loveframe.ui.fragment.base.BaseFragment;
 public class FragmentA extends BaseFragment
 {
     
-    @Bind(R.id.bottomMenu)
-    Button bottomMenu;
+    @Bind(R.id.actionSheetMenu)
+    Button actionSheetMenu;
     
     @Bind(R.id.overlayMenu)
     Button overlayMenu;
     
-    @Bind(R.id.sweetdialogMenu)
-    Button sweetdialogMenu;
-    @Bind(R.id.photoSelectMenu)
-    Button photoSelectMenu;
-
+    @Bind(R.id.sweetdialogBtn)
+    Button sweetdialogBtn;
+    
+    @Bind(R.id.photoSelectBtn)
+    Button photoSelectBtn;
+    
+    @Bind(R.id.progressbarShowBtn)
+    Button progressbarShowBtn;
+    
+    @Bind(R.id.designTabLayoutBtn)
+    Button designTabLayoutBtn;
+    
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -54,16 +63,18 @@ public class FragmentA extends BaseFragment
     @Override
     protected void initData()
     {
-    
+        
     }
     
     @Override
     protected void initListener()
     {
-        bottomMenu.setOnClickListener(this);
+        actionSheetMenu.setOnClickListener(this);
         overlayMenu.setOnClickListener(this);
-        sweetdialogMenu.setOnClickListener(this);
-        photoSelectMenu.setOnClickListener(this);
+        sweetdialogBtn.setOnClickListener(this);
+        photoSelectBtn.setOnClickListener(this);
+        progressbarShowBtn.setOnClickListener(this);
+        designTabLayoutBtn.setOnClickListener(this);
     }
     
     @Override
@@ -72,7 +83,7 @@ public class FragmentA extends BaseFragment
         Intent intent = new Intent();
         switch (v.getId())
         {
-            case R.id.bottomMenu:
+            case R.id.actionSheetMenu:
                 intent.setClass(getActivity(), ActionSheetActivity.class);
                 startActivity(intent);
                 break;
@@ -80,12 +91,20 @@ public class FragmentA extends BaseFragment
                 intent.setClass(getActivity(), OverlayMenuActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.sweetdialogMenu:
+            case R.id.sweetdialogBtn:
                 intent.setClass(getActivity(), SweetDialogActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.photoSelectMenu:
+            case R.id.photoSelectBtn:
                 intent.setClass(getActivity(), PhotoSelectTestActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.progressbarShowBtn:
+                intent.setClass(getActivity(), ProgressBarTestActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.designTabLayoutBtn:
+                intent.setClass(getActivity(), DesignTabLayoutActivity.class);
                 startActivity(intent);
                 break;
             default:

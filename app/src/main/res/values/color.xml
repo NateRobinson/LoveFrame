@@ -2,6 +2,7 @@
 <resources>
     <color name="toolbar_background">#ff3f9fe0</color>
     <color name="tab_layout_background">#FFF4842D</color>
+    <color name="tab_text_appearance_color">#2bffd6</color>
 
 
 </resources>

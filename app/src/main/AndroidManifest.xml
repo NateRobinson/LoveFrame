@@ -44,6 +44,14 @@
         <activity
             android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.test.ProgressBarTestActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.activity.test.DesignTabLayoutActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
