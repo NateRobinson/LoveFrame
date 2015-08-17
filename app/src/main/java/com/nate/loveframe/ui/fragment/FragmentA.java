@@ -14,6 +14,7 @@ import butterknife.ButterKnife;
 import com.nate.loveframe.R;
 import com.nate.loveframe.ui.activity.test.ActionSheetActivity;
 import com.nate.loveframe.ui.activity.test.OverlayMenuActivity;
+import com.nate.loveframe.ui.activity.test.PhotoSelectTestActivity;
 import com.nate.loveframe.ui.activity.test.SweetDialogActivity;
 import com.nate.loveframe.ui.fragment.base.BaseFragment;
 
@@ -31,7 +32,9 @@ public class FragmentA extends BaseFragment
     
     @Bind(R.id.sweetdialogMenu)
     Button sweetdialogMenu;
-    
+    @Bind(R.id.photoSelectMenu)
+    Button photoSelectMenu;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -60,6 +63,7 @@ public class FragmentA extends BaseFragment
         bottomMenu.setOnClickListener(this);
         overlayMenu.setOnClickListener(this);
         sweetdialogMenu.setOnClickListener(this);
+        photoSelectMenu.setOnClickListener(this);
     }
     
     @Override
@@ -78,6 +82,10 @@ public class FragmentA extends BaseFragment
                 break;
             case R.id.sweetdialogMenu:
                 intent.setClass(getActivity(), SweetDialogActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.photoSelectMenu:
+                intent.setClass(getActivity(), PhotoSelectTestActivity.class);
                 startActivity(intent);
                 break;
             default:

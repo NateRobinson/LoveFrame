@@ -1,1 +1,1 @@
-include ':app', ':guillotinemenu', ':shapeloading'
+include ':app', ':guillotinemenu', ':shapeloading', ':multi-image-selector'

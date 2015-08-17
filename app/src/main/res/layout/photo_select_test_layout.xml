@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout"></include>
+
+    <Button
+        android:id="@+id/selectOnePhotoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择一张照片" />
+
+    <Button
+        android:id="@+id/selectMorePhotoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择多张照片" />
+    <!--clipChildren属性就是子控件是否可以超过padding区域，默认是true不可以-->
+    <HorizontalScrollView
+        android:id="@+id/photo_hs"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:clipChildren="false">
+
+        <LinearLayout
+            android:id="@+id/layoutPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"></LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

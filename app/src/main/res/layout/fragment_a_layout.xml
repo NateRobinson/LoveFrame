@@ -21,4 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="sweetdialog使用测试" />
+
+    <Button
+        android:id="@+id/photoSelectMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片选择器使用测试" />
 </LinearLayout>
