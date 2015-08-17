@@ -30,4 +30,5 @@ dependencies {
     compile 'com.baoyz.actionsheet:library:1.1.1'
     compile 'cn.pedant.sweetalert:library:1.3'
     compile project(':guillotinemenu')
+    compile project(':shapeloading')
 }

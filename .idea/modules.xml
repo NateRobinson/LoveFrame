@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/LoveFrame.iml" filepath="$PROJECT_DIR$/LoveFrame.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/guillotinemenu/guillotinemenu.iml" filepath="$PROJECT_DIR$/guillotinemenu/guillotinemenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shapeloading/shapeloading.iml" filepath="$PROJECT_DIR$/shapeloading/shapeloading.iml" />
     </modules>
   </component>
 </project>

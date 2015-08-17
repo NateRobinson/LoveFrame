@@ -12,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 import com.nate.loveframe.R;
-import com.nate.loveframe.ui.activity.test.BottomMenuActivity;
+import com.nate.loveframe.ui.activity.test.ActionSheetActivity;
 import com.nate.loveframe.ui.activity.test.OverlayMenuActivity;
 import com.nate.loveframe.ui.activity.test.SweetDialogActivity;
 import com.nate.loveframe.ui.fragment.base.BaseFragment;
@@ -69,7 +69,7 @@ public class FragmentA extends BaseFragment
         switch (v.getId())
         {
             case R.id.bottomMenu:
-                intent.setClass(getActivity(), BottomMenuActivity.class);
+                intent.setClass(getActivity(), ActionSheetActivity.class);
                 startActivity(intent);
                 break;
             case R.id.overlayMenu:
