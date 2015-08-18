@@ -35,25 +35,27 @@
         <activity
             android:name=".ui.activity.test.SweetDialogActivity"
             android:screenOrientation="portrait"></activity>
-
         <activity
             android:name=".ui.activity.test.PhotoSelectTestActivity"
             android:screenOrientation="portrait"></activity>
-
         <!-- 图片选择器-->
         <activity
             android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.activity.test.ProgressBarTestActivity"
             android:screenOrientation="portrait"></activity>
-
         <activity
             android:name=".ui.activity.test.DesignTabLayoutActivity"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".ui.activity.test.SegmentMenuActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activity.test.TagEditorActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activity.test.TargetGroupActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 
