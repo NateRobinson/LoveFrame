@@ -4,5 +4,8 @@
     <color name="tab_layout_background">#FFF4842D</color>
     <color name="tab_text_appearance_color">#2bffd6</color>
 
-
+    <color name="test_attr_unselected_text_color">#0066CC</color>
+    <color name="test_attr_selected_text_color">#FFFFFF</color>
+    <color name="test_attr_selected_color">#0066CC</color>
+    <color name="test_attr_unselected_color">#FFFFFF</color>
 </resources>

@@ -17,6 +17,7 @@ import com.nate.loveframe.ui.activity.test.DesignTabLayoutActivity;
 import com.nate.loveframe.ui.activity.test.OverlayMenuActivity;
 import com.nate.loveframe.ui.activity.test.PhotoSelectTestActivity;
 import com.nate.loveframe.ui.activity.test.ProgressBarTestActivity;
+import com.nate.loveframe.ui.activity.test.SegmentMenuActivity;
 import com.nate.loveframe.ui.activity.test.SweetDialogActivity;
 import com.nate.loveframe.ui.fragment.base.BaseFragment;
 
@@ -43,7 +44,9 @@ public class FragmentA extends BaseFragment
     
     @Bind(R.id.designTabLayoutBtn)
     Button designTabLayoutBtn;
-    
+    @Bind(R.id.segmentMenuBtn)
+    Button segmentMenuBtn;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -75,6 +78,7 @@ public class FragmentA extends BaseFragment
         photoSelectBtn.setOnClickListener(this);
         progressbarShowBtn.setOnClickListener(this);
         designTabLayoutBtn.setOnClickListener(this);
+        segmentMenuBtn.setOnClickListener(this);
     }
     
     @Override
@@ -105,6 +109,10 @@ public class FragmentA extends BaseFragment
                 break;
             case R.id.designTabLayoutBtn:
                 intent.setClass(getActivity(), DesignTabLayoutActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.segmentMenuBtn:
+                intent.setClass(getActivity(), SegmentMenuActivity.class);
                 startActivity(intent);
                 break;
             default:

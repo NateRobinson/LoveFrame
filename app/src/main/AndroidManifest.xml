@@ -52,6 +52,9 @@
         <activity
             android:name=".ui.activity.test.DesignTabLayoutActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activity.test.SegmentMenuActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -16,4 +16,10 @@
         <item>Tab3</item>
         <item>Tab4</item>
     </string-array>
+
+    <string-array name="three_state_option">
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+    </string-array>
 </resources>
