@@ -17,6 +17,7 @@ import com.nate.loveframe.ui.activity.test.DesignTabLayoutActivity;
 import com.nate.loveframe.ui.activity.test.OverlayMenuActivity;
 import com.nate.loveframe.ui.activity.test.PhotoSelectTestActivity;
 import com.nate.loveframe.ui.activity.test.ProgressBarTestActivity;
+import com.nate.loveframe.ui.activity.test.SeekBarActivity;
 import com.nate.loveframe.ui.activity.test.SegmentMenuActivity;
 import com.nate.loveframe.ui.activity.test.SweetDialogActivity;
 import com.nate.loveframe.ui.activity.test.TargetGroupActivity;
@@ -52,6 +53,9 @@ public class FragmentA extends BaseFragment
     @Bind(R.id.targetGroupBtn)
     Button targetGroupBtn;
     
+    @Bind(R.id.seekBarBtn)
+    Button seekBarBtn;
+    
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -85,6 +89,7 @@ public class FragmentA extends BaseFragment
         designTabLayoutBtn.setOnClickListener(this);
         segmentMenuBtn.setOnClickListener(this);
         targetGroupBtn.setOnClickListener(this);
+        seekBarBtn.setOnClickListener(this);
     }
     
     @Override
@@ -123,6 +128,10 @@ public class FragmentA extends BaseFragment
                 break;
             case R.id.targetGroupBtn:
                 intent.setClass(getActivity(), TargetGroupActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.seekBarBtn:
+                intent.setClass(getActivity(), SeekBarActivity.class);
                 startActivity(intent);
                 break;
             default:

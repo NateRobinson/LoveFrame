@@ -57,6 +57,9 @@
         <activity
             android:name=".ui.activity.test.TargetGroupActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activity.test.SeekBarActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
